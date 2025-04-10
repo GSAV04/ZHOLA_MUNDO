@@ -1,0 +1,24 @@
+managed implementation in class zbp_cds_dd_zconce_22 unique;
+strict ( 2 );
+
+define behavior for ZCDS_DD_ZCONCE_22 //alias <alias_name>
+persistent table zconce_22
+lock master
+authorization master( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly ) IdConce;
+
+    mapping for zconce_22 {
+    IdConce = id_conce;
+    NomConce = nom_conce;
+    Localidad = localidad;
+    Provincia = provincia;
+    CodPostal = cod_postal;
+    Email = email;
+    Telefono = telefono;
+    }
+}

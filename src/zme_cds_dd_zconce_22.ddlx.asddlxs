@@ -1,0 +1,53 @@
+@Metadata.layer: #CORE
+@UI.chart: [{
+title: 'Concesionario por provincia',
+description: 'Cantidad de concesionarios agrupados',
+chartType: #COLUMN,
+dimensions: [ 'provincia' ],
+measures: [ 'provincia' ],
+dimensionAttributes: [{ dimension: 'provincia', role: #CATEGORY  }],
+measureAttributes: [{ measure: 'provincia', role: #AXIS_1 }] }]
+
+@UI.headerInfo:{
+title: { value:'NomConce' },
+description: { value:'Provincia' }
+}
+
+annotate view ZCDS_DD_ZCONCE_22 with
+{
+  @UI.selectionField: [{ position: 10 }]
+  @UI.lineItem: [{ position: 10, label: 'ID Concesionario' }]
+  @UI.identification: [{ position: 20 }]
+  @UI.hidden: true
+  IdConce;
+
+  @UI.selectionField: [{ position: 10 }]
+  @UI.lineItem: [{ position: 10, label: 'Nombre Concesionario' }]
+  @UI.identification: [{ position: 20 }]
+  NomConce;
+
+  @UI.selectionField: [{ position: 10 }]
+  @UI.lineItem: [{ position: 10, label: 'Localidad Concesionario' }]
+  @UI.identification: [{ position: 20 }]
+  Localidad;
+
+  @UI.selectionField: [{ position: 10 }]
+  @UI.lineItem: [{ position: 10, label: 'ID Concesionario' }]
+  @UI.identification: [{ position: 20 }]
+  Provincia;
+
+  @UI.selectionField: [{ position: 10 }]
+  @UI.lineItem: [{ position: 10, label: 'Codigo postal' }]
+  @UI.identification: [{ position: 20 }]
+  CodPostal;
+
+  @UI.selectionField: [{ position: 10 }]
+  @UI.lineItem: [{ position: 10, label: 'Telefono' }]
+  @UI.identification: [{ position: 20 }]
+  Telefono;
+
+  @UI.selectionField: [{ position: 10 }]
+  @UI.lineItem: [{ position: 10, label: 'Email' }]
+  @UI.identification: [{ position: 20 }]
+  Email;
+}
